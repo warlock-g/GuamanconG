@@ -1,0 +1,67 @@
+---
+import Section from '../layouts/Section.astro'
+import { Image } from 'astro:assets'
+import logo from '../assets/fondo hero 1.png'
+---
+
+<Section id="proyectos" class="wrapper my-24 pt-20">
+  <h2 class="mb-10 py-6 text-center font-bold text-cornflower-900">Proyectos</h2>
+  <div class="grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-3">
+    <article
+      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-md hover:scale-105">
+      <a href="#">
+        <Image src={logo} alt="Primer proyecto" class={'rounded-t-lg'} />
+      </a>
+      <div class="flex flex-col items-start gap-5 p-5">
+        <a href="#">
+          <h4 class="font-bold text-cornflower-800">Proyecto 1</h4>
+        </a>
+        <p class="font-serif font-medium text-cornflower-700">
+          Descripción del desarrollo realizado en este proyecto y todo lo demás.
+        </p>
+      </div>
+    </article>
+    <article
+      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-md hover:scale-105">
+      <a href="#">
+        <Image src={logo} alt="Primer proyecto" class={'rounded-t-lg'} />
+      </a>
+      <div class="flex flex-col items-start gap-5 p-5">
+        <a href="#">
+          <h4 class="font-bold text-cornflower-800">Proyecto 2 nuevo</h4>
+        </a>
+        <p class="font-serif font-medium text-cornflower-700">
+          Descripción del desarrollo realizado en este proyecto y todo lo demás.
+        </p>
+      </div>
+    </article>
+    <article
+      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-md hover:scale-105">
+      <a href="#">
+        <Image src={logo} alt="Primer proyecto" class={'rounded-t-lg'} />
+      </a>
+      <div class="flex flex-col items-start gap-5 p-5">
+        <a href="#">
+          <h4 class="font-bold text-cornflower-800">Proyecto 3 sin</h4>
+        </a>
+        <p class="font-serif font-medium text-cornflower-700">
+          Descripción del desarrollo realizado en este proyecto y todo lo demás.
+        </p>
+      </div>
+    </article>
+    <article
+      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-md hover:scale-105">
+      <a href="#">
+        <Image src={logo} alt="Primer proyecto" class={'rounded-t-lg'} />
+      </a>
+      <div class="flex flex-col items-start gap-5 p-5">
+        <a href="#">
+          <h4 class="font-bold text-cornflower-800">Proyecto 4 uno dos</h4>
+        </a>
+        <p class="font-serif font-medium text-cornflower-700">
+          Descripción del desarrollo realizado en este proyecto y todo lo demás.
+        </p>
+      </div>
+    </article>
+  </div>
+</Section>
