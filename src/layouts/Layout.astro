@@ -104,7 +104,6 @@ const { title } = Astro.props
     <script is:inline type="module">
       window.addEventListener('scroll', () => {
         const header = document.querySelector('#header')
-        console.log(scrollY)
         if (window.scrollY > 70) {
           header.classList.remove('h-24')
           header.classList.add('bg-cornflower-300/95', 'h-14')
