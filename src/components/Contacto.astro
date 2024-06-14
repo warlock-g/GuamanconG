@@ -1,12 +1,12 @@
 ---
 import Section from '../layouts/Section.astro'
-import imgContacto from '../assets/your_ideas_matter.webp'
-import { Image } from 'astro:assets'
 ---
 
 <Section id="contacto" class="wrapper py-20">
   <div class="flex">
-    <div class="w-1/3"><Image class="h-full object-cover" src={imgContacto} alt="imagen con fondo negro" /></div>
+    <div class="w-1/3">
+      <img class="h-full object-cover" src="/your_ideas_matter.webp" alt="imagen con fondo negro" />
+    </div>
     <div class="mx-auto w-2/3 max-w-md">
       <h2 class="pb-4 text-cornflower-600">Contacto</h2>
       <div class="group relative z-0 mb-5 w-full">
