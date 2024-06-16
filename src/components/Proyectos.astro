@@ -1,80 +1,50 @@
 ---
 import Section from '../layouts/Section.astro'
+
+const articles = [
+  {
+    title: 'Integración Dropshipping',
+    image: '/imagen-proy1.png',
+    content:
+      'Se realiza integración de Dropshipping en Ecommerce desarrollado en Woocommerce, implementando la creación de \
+          OC en Intcomex desde Woocommerce en el cliente.',
+    url: '#',
+  },
+  {
+    title: 'Ecommerce cotizaciones productos y servicios',
+    image: '/imagen-proy2.png',
+    content:
+      'Web en Wordpress con Woocommerce para manejar cotizaciones de productos tecnológicos y servicios para nuestro cliente.',
+    url: '#',
+  },
+  {
+    title: 'Webapp Fiori / SAPUi5',
+    image: '/imagen-proy3.png',
+    content:
+      'Webapp en framework Javascript de SAP ABAP / SAPUi5 Fiori para el mantenimiento de secciones y las \
+          configuraciones de tipo de costo a aplicar en el ingreso de precios del cliente.',
+    url: '#',
+  },
+]
 ---
 
 <Section id="proyectos" class="wrapper my-24 pt-20">
-  <h2 class="mb-10 py-6 text-center font-semibold text-cornflower-800">Proyectos</h2>
+  <h2 class="mb-10 py-6 text-center font-semibold text-cornflower-800 dark:text-cornflower-200">Proyectos</h2>
   <div class="grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-3">
-    <article
-      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-lg hover:scale-105 hover:ring-1">
-      <a href="#" class="h-52">
-        <img
-          src="/imagen-proy1.png"
-          alt="Primer proyecto"
-          class={'h-full w-full object-cover object-top rounded-t-lg'}
-        />
-      </a>
-      <div class="flex flex-col items-start gap-5 p-5">
-        <a href="#">
-          <h4 class="font-bold text-cornflower-800">Integración Dropshipping</h4>
-        </a>
-        <p class="font-serif font-medium text-cornflower-700">
-          Se realiza integración de Dropshipping en Ecommerce desarrollado en Woocommerce, implementando la creación de
-          OC en Intcomex desde Woocommerce.
-        </p>
-      </div>
-    </article>
-    <article
-      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-lg hover:scale-105 hover:ring-1">
-      <a href="#" class="h-52">
-        <img
-          src="/imagen-proy2.png"
-          alt="Primer proyecto"
-          class={'h-full w-full object-cover object-top rounded-t-lg'}
-        />
-      </a>
-      <div class="flex flex-col items-start gap-5 p-5">
-        <a href="#">
-          <h4 class="font-bold text-cornflower-800">Ecommerce cotizaciones productos y servicios</h4>
-        </a>
-        <p class="font-serif font-medium text-cornflower-700">
-          Web en Wordpress con Woocommerce para manejar cotizaciones de productos tecnológicos y servicios para nuestro
-          cliente.
-        </p>
-      </div>
-    </article>
-    <article
-      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-lg hover:scale-105 hover:ring-1">
-      <a href="#" class="h-52">
-        <img
-          src="/imagen-proy3.png"
-          alt="Primer proyecto"
-          class={'h-full w-full object-cover object-top rounded-t-lg'}
-        />
-      </a>
-      <div class="flex flex-col items-start gap-5 p-5">
-        <a href="#">
-          <h4 class="font-bold text-cornflower-800">Webapp Fiori / SAPUi5</h4>
-        </a>
-        <p class="font-serif font-medium text-cornflower-700">
-          Webapp en framework Javascript de SAP ABAP / SAPUi5 Fiori para el mantenimiento de secciones y las
-          configuraciones de tipo de costo a aplicar en el ingreso de precios del cliente.
-        </p>
-      </div>
-    </article>
-    <article
-      class="flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-lg hover:scale-105 hover:ring-1">
-      <a href="#" class="h-52">
-        <img src="/fondo-hero.png" alt="Primer proyecto" class={'h-full w-full object-cover object-top rounded-t-lg'} />
-      </a>
-      <div class="flex flex-col items-start gap-5 p-5">
-        <a href="#">
-          <h4 class="font-bold text-cornflower-800">Proyecto 4 uno dos</h4>
-        </a>
-        <p class="font-serif font-medium text-cornflower-700">
-          Descripción del desarrollo realizado en este proyecto y todo lo demás.
-        </p>
-      </div>
-    </article>
+    {
+      articles.map((art) => (
+        <article class="mx-auto flex max-w-sm flex-col rounded-lg border-cornflower-400 bg-cornflower-200 pb-5 shadow-lg transition-all duration-300 hover:scale-105 hover:ring-1 sm:mx-0">
+          <a href={art.url} class="h-52">
+            <img src={art.image} alt={art.title} class={'h-full w-full rounded-t-lg object-cover object-top'} />
+          </a>
+          <div class="flex flex-col items-start gap-5 p-5">
+            <a href={art.url}>
+              <h4 class="font-bold text-cornflower-800">{art.title}</h4>
+            </a>
+            <p class="font-serif font-medium text-cornflower-700">{art.content}</p>
+          </div>
+        </article>
+      ))
+    }
   </div>
 </Section>

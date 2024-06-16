@@ -4,24 +4,24 @@ import Section from '../layouts/Section.astro'
 
 <Section id="contacto" class="wrapper py-20">
   <div class="flex">
-    <div class="w-1/3">
+    <div class="hidden w-1/3 sm:block">
       <img class="h-full object-cover" src="/your_ideas_matter.webp" alt="imagen con fondo negro" />
     </div>
-    <div class="mx-auto w-2/3 max-w-md px-8 py-4 shadow-lg">
-      <h2 class="pb-4 font-semibold text-cornflower-800">Contacto</h2>
+    <div class="mx-auto w-2/3 max-w-md px-8 py-4 shadow-lg dark:shadow-cornflower-200/20">
+      <h2 class="pb-4 font-semibold text-cornflower-800 dark:text-cornflower-200">Contacto</h2>
       <form id="form-contact">
         <div class="group relative z-0 mb-5 w-full">
           <input
             type="text"
             name="floating_first_name"
             id="floating_first_name"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-cornflower-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-cornflower-500"
             placeholder=" "
             required
           />
           <label
             for="floating_first_name"
-            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-blue-500"
+            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-cornflower-600 rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-cornflower-400"
             >Nombre</label
           >
         </div>
@@ -30,13 +30,13 @@ import Section from '../layouts/Section.astro'
             type="email"
             name="floating_email"
             id="floating_email"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-cornflower-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-cornflower-500"
             placeholder=" "
             required
           />
           <label
             for="floating_email"
-            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-blue-500"
+            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-cornflower-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-cornflower-400"
             >Email</label
           >
         </div>
@@ -45,11 +45,11 @@ import Section from '../layouts/Section.astro'
             id="floating_message"
             name="floating_message"
             rows="4"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-cornflower-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-cornflower-500"
             placeholder=" "></textarea>
           <label
             for="floating_message"
-            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-blue-500"
+            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-cornflower-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-cornflower-400"
             >Your message</label
           >
         </div>
