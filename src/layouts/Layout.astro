@@ -50,62 +50,68 @@ const { title } = Astro.props
     <header
       id="header"
       class="sticky top-0 z-50 mb-8 h-24 bg-cornflower-50 pb-1 text-cornflower-950 shadow-lg shadow-cornflower-200 transition-all duration-500 dark:bg-cornflower-950 dark:text-cornflower-200">
-      <div class="wrapper flex h-full items-center justify-between">
+      <div class="wrapper flex h-full items-center justify-between max-md:pr-4">
         <a href="/" class="h-full">
-          <img class="h-full w-full" src="/logo-guamancong.png" alt="Logo Empresa Guamán con G color Cyan" />
+          <img
+            class="h-full w-full object-contain"
+            src="/logo-guamancong.png"
+            alt="Logo Empresa Guamán con G color Cyan"
+          />
         </a>
-        <label for="dark-mode" class="relative z-40 cursor-pointer px-3 py-6">
-          <input type="checkbox" name="dark-mode" id="dark-mode" class="peer hidden" />
-          <div
-            class="relative z-50 h-[2px] w-6 bg-black content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:bottom-[-0.35rem] after:right-0 after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform before:peer-checked:bg-white after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform after:peer-checked:bg-white md:hidden dark:bg-white dark:before:bg-white dark:after:bg-white">
-          </div>
-          <div class="fixed inset-0 z-40 hidden h-full w-full bg-black/70 backdrop-blur-sm peer-checked:block">
-            &nbsp;
-          </div>
-          <nav
-            class="fixed right-0 top-0 z-40 h-full w-full translate-x-full flex-col space-y-6 overflow-y-auto overscroll-y-none px-20 py-24 text-cornflower-100 transition duration-500 peer-checked:flex peer-checked:translate-x-0 md:static md:flex md:h-12 md:w-auto md:translate-x-0 md:flex-row md:items-center md:justify-between md:gap-6 md:space-y-0 md:divide-y-0 md:bg-inherit md:px-11 md:py-2 md:text-inherit">
-            {
-              menuOptions.map(
-                (option) =>
-                  option.visible && (
-                    <a
-                      href={option.url}
-                      class="rounded border-cornflower-400 px-10 py-4 text-4xl font-bold hover:bg-cornflower-400 hover:text-cornflower-100 active:bg-cornflower-400 md:px-4 md:py-0 md:text-xl">
-                      {option.name}
-                    </a>
-                  )
-              )
-            }
-          </nav>
-        </label>
-        <button id="toggle-dark-light" class="size-6 hover:scale-95 hover:text-cornflower-500">
-          <svg
-            class="dark:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="hidden dark:block">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            ></path>
-          </svg>
-        </button>
+        <div class="flex items-center">
+          <label for="menu-responsive" class="relative z-40 cursor-pointer px-3 py-6">
+            <input type="checkbox" name="menu-responsive" id="menu-responsive" class="peer hidden" />
+            <div
+              class="relative z-50 h-[2px] w-6 bg-black content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:bottom-[-0.35rem] after:right-0 after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform before:peer-checked:bg-white after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform after:peer-checked:bg-white md:hidden dark:bg-white dark:before:bg-white dark:after:bg-white">
+            </div>
+            <div class="fixed inset-0 z-40 hidden h-full w-full bg-black/70 backdrop-blur-sm peer-checked:block">
+              &nbsp;
+            </div>
+            <nav
+              class="fixed right-0 top-0 z-40 h-full w-full translate-x-full flex-col space-y-6 overflow-y-auto overscroll-y-none px-20 py-24 text-cornflower-100 transition duration-500 peer-checked:flex peer-checked:translate-x-0 md:static md:flex md:h-12 md:w-auto md:translate-x-0 md:flex-row md:items-center md:justify-between md:gap-6 md:space-y-0 md:divide-y-0 md:bg-inherit md:px-11 md:py-2 md:text-inherit">
+              {
+                menuOptions.map(
+                  (option) =>
+                    option.visible && (
+                      <a
+                        href={option.url}
+                        class="rounded border-cornflower-400 px-10 py-4 text-4xl font-bold hover:bg-cornflower-400 hover:text-cornflower-100 active:bg-cornflower-400 md:px-4 md:py-0 md:text-xl">
+                        {option.name}
+                      </a>
+                    )
+                )
+              }
+            </nav>
+          </label>
+          <button id="toggle-dark-light" class="size-6 hover:scale-95 hover:text-cornflower-500">
+            <svg
+              class="dark:hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="hidden dark:block">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <slot />
