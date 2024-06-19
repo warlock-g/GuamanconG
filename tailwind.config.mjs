@@ -26,8 +26,7 @@ export default {
         serif: ['Lora', ...defaultTheme.fontFamily.serif],
       },
       backgroundImage: {
-        hero: "url('/fondo-hero.png')",
-        contact: "url('/your_ideas_matter.webp')",
+        hero: "url('/src/assets/fondo-hero.png')",
       },
     },
   },
