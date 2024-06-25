@@ -1,0 +1,101 @@
+---
+import logo from '@/assets/logo-guamancong.webp'
+
+const menuOptions = [
+  { name: 'Inicio', url: '#', visible: true },
+  { name: 'Proyectos', url: '#proyectos', visible: true },
+  { name: 'Blog', url: '#blog', visible: false },
+  { name: 'Contacto', url: '#contacto', visible: true },
+]
+---
+
+<header
+  id="header-nav"
+  class="sticky top-0 z-10 mb-8 h-20 bg-cornflower-100/50 pb-1 text-cornflower-950 shadow-lg shadow-cornflower-200 dark:bg-cornflower-950 dark:text-cornflower-200">
+  <div class="relative z-20 mx-4 flex h-full flex-row items-center justify-between lg:mx-8">
+    <div class="flex h-full items-center">
+      <img class="h-full" src="/src/assets/logo-guamancong.webp" alt="logo de empresa guaman con g cyan" />
+    </div>
+    <div class="flex items-center gap-4">
+      <input hidden type="checkbox" id="navbar-responsive" class="peer" name="navbar-responsive" />
+      <label
+        for="navbar-responsive"
+        class="peer-checked:hamburger group block cursor-pointer space-y-1 px-3 py-3 md:hidden">
+        <div class="h-[2px] w-6 bg-cornflower-950 transition group-hover:bg-cornflower-500 dark:bg-cornflower-200">
+        </div>
+        <div class="h-[2px] w-6 bg-cornflower-950 transition group-hover:bg-cornflower-500 dark:bg-cornflower-200">
+        </div>
+        <div class="h-[2px] w-6 bg-cornflower-950 transition group-hover:bg-cornflower-500 dark:bg-cornflower-200">
+        </div>
+      </label>
+      <nav
+        class="absolute left-0 top-20 flex h-screen w-full translate-x-full flex-col gap-10 bg-cornflower-100/90 p-20 text-2xl font-semibold backdrop-blur-lg transition duration-500 peer-checked:translate-x-0 md:static md:w-auto md:translate-x-0 md:flex-row md:items-center md:bg-inherit md:p-0 md:text-inherit md:backdrop-blur-none dark:bg-cornflower-900/90 dark:md:bg-inherit">
+        {
+          menuOptions.map(
+            (option) =>
+              option.visible && (
+                <a
+                  href={option.url}
+                  class="rounded border-cornflower-400 px-10 py-4 text-4xl font-bold hover:bg-cornflower-400 hover:text-cornflower-100 active:bg-cornflower-400 md:px-4 md:py-0 md:text-xl">
+                  {option.name}
+                </a>
+              )
+          )
+        }
+      </nav>
+      <button id="toggle-dark-light" class="size-8 hover:scale-95 hover:text-cornflower-500">
+        <svg
+          class="dark:hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="hidden dark:block">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+<script type="module">
+  document.getElementById('toggle-dark-light').addEventListener('click', () => {
+    const html = document.querySelector('html')
+    localStorage.setItem('dark-mode', html.classList.toggle('dark'))
+  })
+</script>
+
+<style>
+  #header-nav {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  @keyframes blur {
+    to {
+      box-shadow:
+        0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+        0px 0px 0 1px rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      height: 3rem;
+    }
+  }
+</style>
