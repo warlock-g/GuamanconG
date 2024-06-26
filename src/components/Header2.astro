@@ -12,11 +12,11 @@ const menuOptions = [
 <header
   id="header-nav"
   class="sticky top-0 z-10 mb-8 h-20 bg-cornflower-100/50 pb-1 text-cornflower-950 shadow-lg shadow-cornflower-200 dark:bg-cornflower-950 dark:text-cornflower-200">
-  <div class="relative z-20 mx-4 flex h-full flex-row items-center justify-between lg:mx-8">
-    <div class="flex h-full items-center">
+  <div class="relative z-20 flex h-full flex-row items-center justify-between">
+    <div class="ml-4 flex h-full items-center lg:ml-8">
       <img class="h-full" src={logo.src} alt="logo de empresa guaman con g cyan" />
     </div>
-    <div class="flex items-center gap-4">
+    <div class="mr-4 flex items-center gap-4 lg:mr-8">
       <input hidden type="checkbox" id="navbar-responsive" class="peer" name="navbar-responsive" />
       <label
         for="navbar-responsive"
@@ -29,7 +29,7 @@ const menuOptions = [
         </div>
       </label>
       <nav
-        class="absolute left-0 top-20 flex h-screen w-full translate-x-full flex-col gap-10 bg-cornflower-100/90 p-20 text-2xl font-semibold backdrop-blur-lg transition duration-500 peer-checked:translate-x-0 md:static md:w-auto md:translate-x-0 md:flex-row md:items-center md:bg-inherit md:p-0 md:text-inherit md:backdrop-blur-none dark:bg-cornflower-900/90 dark:md:bg-inherit">
+        class="absolute left-0 top-20 flex h-screen w-full -translate-x-full flex-col gap-10 bg-cornflower-100/90 p-10 text-2xl font-semibold backdrop-blur-lg transition duration-500 peer-checked:translate-x-0 md:static md:w-auto md:translate-x-0 md:flex-row md:items-center md:bg-inherit md:p-0 md:text-inherit md:backdrop-blur-none dark:bg-cornflower-900/90 dark:md:bg-inherit">
         {
           menuOptions.map(
             (option) =>
